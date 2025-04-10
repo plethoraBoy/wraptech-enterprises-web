@@ -2,6 +2,7 @@
   padding: 80px 20px;
   background: linear-gradient(to right, #f0fff4, #e6fffa);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 .services-header {
@@ -30,6 +31,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .services-text {
@@ -64,18 +66,17 @@
 .services-button {
   padding: 15px 25px;
   border: 2px solid #10b981;
- border-radius: 999px;
+  border-radius: 999px;
   color: #065f46;
- z-index: 1;
- position: relative;
- font-weight: 700;
- background-color: #ffffff;
- font-size: 17px;
- -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
- box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
- transition: all 250ms;
- overflow: hidden;
-  
+  z-index: 1;
+  position: relative;
+  font-weight: 700;
+  background-color: #ffffff;
+  font-size: 17px;
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .services-button::before {
@@ -86,26 +87,20 @@
   height: 100%;
   width: 0;
   border-radius: 15px;
-   background: linear-gradient(to right, #10b981, #059669);
+  background: linear-gradient(to right, #10b981, #059669);
   z-index: -1;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
   box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
   transition: all 250ms;
-  color: #e8e8e8;
-
 }
+
 .services-button:hover {
   color: #e8e8e8;
- }
- 
- .services-button:hover::before {
-  width: 100%;  
-
- }
-.services-button:hover {
   background: transparent;
   border: 2px solid #10b981;
-  color: #ffffff;
+}
+
+.services-button:hover::before {
+  width: 100%;
 }
 
 .services-grid {
@@ -131,10 +126,11 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Carousel styling override (optional) */
+/* Carousel styling */
 .gallery {
   background: #e0f2f1;
   padding: 30px 0;
+  overflow-x: hidden;
 }
 
 .gallery-cell {
@@ -148,4 +144,35 @@
   font-size: 3rem;
   color: white;
   border-radius: 12px;
+  flex-shrink: 0; /* Prevent shrinking and overflow */
+}
+
+/* Optional: Make mobile responsive */
+@media (max-width: 768px) {
+  .services-wrapper {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .services-text,
+  .services-grid {
+    max-width: 100%;
+  }
+
+  .services-header {
+    font-size: 2rem;
+  }
+
+  .services-title {
+    font-size: 1.8rem;
+  }
+
+  .services-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gallery-cell {
+    width: 90%;
+  }
 }
