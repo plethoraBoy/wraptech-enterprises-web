@@ -6,7 +6,7 @@ import 'swiper/swiper-bundle.css';
 // import 'swiper/css/p';
 // import 'swiper/css/navigation';
 
-import './cara.css';
+import './Cara.css';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
