@@ -19,7 +19,7 @@ const Hero = () => {
           transition={{ duration: 1 }}
         >
           <h1>Explore the Technology</h1>
-          <p>Uncover the power of cutting-edge AI and analytics tools designed to elevate innovation and drive smarter outcomes.</p>
+          <p>Uncover the power of cutting-edge technology designed to elevate innovation and drive smarter outcomes.</p>
           <motion.button
             className="button"
             whileHover={{ scale: 1.05 }}

@@ -1,6 +1,5 @@
 .cards-section {
-    background-color: #f9fafb;
-    padding: 4rem 1.5rem;
+  background: linear-gradient(to right, #f0fff4, #e6fffa);    padding: 4rem 1.5rem;
   }
   
   .cards-container {
@@ -15,7 +14,7 @@
   .card {
     position: relative;
     overflow: hidden;
-    padding: 1.5rem;
+    padding: 1.7rem;
     border-radius: 1rem;
     background-color: white;
     border: 1px solid #e5e7eb;
@@ -62,7 +61,15 @@
     align-items: center;
     justify-content: center;
   }
+  .card:hover .card-icon {
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
   
+  .card:hover .card-icon svg {
+    color: #10b981;
+    transition: color 0.3s ease;
+  }
   .card-title {
     position: relative;
     z-index: 1;

@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar";
 import Services from "./section/Services/Services";
 import Clients from "./section/Clients/Clients";
 import Footer from "./section/Footer/Footer";
-import HorizontalCards from "./section/cards";
 import ServicesPage from "./page/ServicesPage";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
@@ -17,7 +16,6 @@ function HomePage() {
       <AboutUs />
       <Services />
       <Clients />
-      <HorizontalCards />
     </>
   );
 }

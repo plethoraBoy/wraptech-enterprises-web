@@ -1,26 +1,27 @@
 import { motion } from "framer-motion";
 import "./Service.css";
 import Carousel from "./Cara.js";
+import ServicesCard from "../ServicesCard.js";
 
 const ServicesSection = () => {
   const servicesColumn1 = [
     "CCTV System",
-    "Access Control System",
-    "Biometric & Attendance System",
     "Epabx",
     "Networking",
-    "Home Automation",
+    "MEP",
     "Smart Locks",
+    "IT Products",
+    "Home Automation",
   ];
 
   const servicesColumn2 = [
     "Fire Alarm System",
     "Fire Fighting System",
-    "Public Announcement System",
-    "Video Door Phone",
-    "MEP",
     "Hotel Automation",
-    "IT Products",
+    "Video Door Phone",
+    "Biometric & Attendance System",
+    "Access Control System",
+    "Public Announcement System",
   ];
 
   const allServices = [...servicesColumn1, ...servicesColumn2];
@@ -77,6 +78,18 @@ const ServicesSection = () => {
                 {service}
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+
+        {/* Services Card */}
+        <div className="services-card-wrapper">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <ServicesCard />
           </motion.div>
         </div>
       </section>

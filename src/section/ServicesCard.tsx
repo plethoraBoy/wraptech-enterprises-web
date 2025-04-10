@@ -1,33 +1,29 @@
 import { motion } from "framer-motion";
-import { FiCpu, FiGlobe, FiZap } from "react-icons/fi";
 import "./HorizontalCards.css"; // Make sure to create this CSS file
+
+import { FiTruck, FiTool, FiSettings } from "react-icons/fi"; // Use icons representing the new categories
 
 const cards = [
   {
-    title: "Performance",
-    description: "Experience lightning-fast speeds and unmatched power with our optimized system.",
-    icon: FiZap,
+    title: "Supply",
+    description: "Reliable and timely delivery of advanced systems and components tailored to your needs.",
+    icon: FiTruck,
     colorClass: "pink-red-gradient",
   },
   {
-    title: "Connectivity",
-    description: "Stay seamlessly connected wherever you go with our global support system.",
-    icon: FiGlobe,
+    title: "Installation",
+    description: "Professional installation ensuring your systems are set up with precision and efficiency.",
+    icon: FiTool,
     colorClass: "blue-cyan-gradient",
   },
   {
-    title: "Technology",
-    description: "Harness cutting-edge tech engineered to elevate your workflow and creativity and creativity.",
-    icon: FiCpu,
-    colorClass: "green-emerald-gradient",
-  },
-  {
-    title: "Technology",
-    description: "Harness cutting-edge tech engineered to elevate your workflow and creativity .",
-    icon: FiCpu,
+    title: "Maintenance",
+    description: "Ongoing support and regular servicing to keep your systems running at peak performance.",
+    icon: FiSettings,
     colorClass: "green-emerald-gradient",
   },
 ];
+
 
 const HorizontalCards = () => {
   return (
