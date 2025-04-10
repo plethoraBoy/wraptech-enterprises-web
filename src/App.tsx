@@ -6,9 +6,9 @@ import Navbar from "./components/Navbar";
 import Services from "./section/Services/Services";
 // import Clients from "./section/Clients/Clients";
 import Footer from "./section/Footer/Footer";
-import ServicesPage from "./page/ServicesPage";
+import ServicesPage from "./page/ServicesPage/ServicesPage";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import ContactPage from "./page/ContactPage";
+import ContactPage from "./page/ContactPage/ContactPage";
 import { useEffect, useRef, useState } from "react";
 import { FiChevronUp } from "react-icons/fi";
 

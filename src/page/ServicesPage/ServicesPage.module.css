@@ -1,4 +1,4 @@
-.services-page-container {
+.servicesPageContainer {
   padding: 60px 40px;
   background-color: #ffffff;
   font-family: Arial, sans-serif;
@@ -6,51 +6,50 @@
   color: #333;
 }
 
-.services-header {
+.servicesHeader {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.services-header h1 {
+.servicesHeader h1 {
   font-size: 2.5rem;
   color: #222;
   margin-bottom: 10px;
 }
 
-.services-header p {
+.servicesHeader p {
   font-size: 1.1rem;
   color: #666;
 }
 
-.services-page-section {
+.servicesPageSection {
   border-radius: 20px;
   margin-bottom: 40px;
   background: linear-gradient(to right, #f0fff4, #e6fffa);
   padding: 40px;
-  
 }
 
-.services-page-section h2 {
+.servicesPageSection h2 {
   font-size: 1.8rem;
   color: #1f2937;
   margin-bottom: 20px;
-border-left:5px solid #10b981;
+  border-left: 5px solid #10b981;
   padding-left: 20px;
   font-weight: 600;
-  }
+}
 
-.services-page-section ul {
+.servicesPageSection ul {
   list-style: none;
   padding-left: 0;
 }
 
-.services-page-section li {
+.servicesPageSection li {
   margin-bottom: 15px;
   padding-left: 20px;
   position: relative;
 }
 
-.services-page-section li::before {
+.servicesPageSection li::before {
   content: "✔";
   position: absolute;
   left: 0;

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./css/ServicesPage.css";
+import styles from "./ServicesPage.module.css";
 
 const servicesData = [
   {
@@ -72,9 +72,9 @@ const listItemVariants = {
 
 const ServicesPage = () => {
   return (
-    <div className="services-page-container">
+    <div className={styles.servicesPageContainer}>
       <motion.header
-        className="services-header"
+        className={styles.servicesHeader}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -90,7 +90,7 @@ const ServicesPage = () => {
       {servicesData.map((section, index) => (
         <motion.div
           key={index}
-          className="services-page-section"
+          className={styles.servicesPageSection}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -118,3 +118,5 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
+
+

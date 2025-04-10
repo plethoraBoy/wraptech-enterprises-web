@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./Service.css";
+import styles from "./Service.module.css";
 
 import ServicesCard from "../ServicesCard.js";
 import { FaBullhorn, FaCamera, FaFingerprint, FaFireExtinguisher, FaLaptop, FaLock, FaVideo } from "react-icons/fa6";
@@ -28,40 +28,39 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="services-section">
+    <section className={styles.servicesSection}>
       <motion.div
-        className="services-header"
+        className={styles.servicesHeader}
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-<h2>
-Our Services
-</h2>      </motion.div>
+        <h2>Our Services</h2>
+      </motion.div>
 
-      <div className="services-wrapper">
+      <div className={styles.servicesWrapper}>
         {/* Text Section */}
         <motion.div
-          className="services-text"
+          className={styles.servicesText}
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="services-subtitle">What We Offer</span>
-          <h2 className="services-title">Our Exceptional Services</h2>
-          <p className="services-description">
+          <span className={styles.servicesSubtitle}>What We Offer</span>
+          <h2 className={styles.servicesTitle}>Our Exceptional Services</h2>
+          <p className={styles.servicesDescription}>
             We provide a wide range of cutting-edge solutions designed to improve
             security, automation, and connectivity in modern living and working
             environments.
           </p>
-          <button className="services-button">Explore Services</button>
+          <button className={styles.servicesButton}>Explore Services</button>
         </motion.div>
 
         {/* Services Grid */}
         <motion.div
-          className="services-grid"
+          className={styles.servicesGrid}
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -70,21 +69,21 @@ Our Services
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="service-card"
+              className={styles.serviceCard}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               viewport={{ once: true }}
             >
-              <div className="service-icon">{service.icon}</div>
-              <div className="service-name">{service.name}</div>
+              <div className={styles.serviceIcon}>{service.icon}</div>
+              <div className={styles.serviceName}>{service.name}</div>
             </motion.div>
           ))}
         </motion.div>
       </div>
 
       {/* Services Card */}
-      <div className="services-card-wrapper">
+      <div className={styles.servicesCardWrapper}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

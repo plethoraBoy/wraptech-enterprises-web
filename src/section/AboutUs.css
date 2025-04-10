@@ -99,14 +99,20 @@
   .about-content {
     padding-left: 20px;
   }
+  
 }
 
 /* Extra Small Screens */
 @media (max-width: 480px) {
   .about-content h2 {
     font-size: 1.8rem;
+    text-align: center;
   }
 
+  .about-content h2::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .about-content p,
   .company-started p {
     font-size: 0.95rem;

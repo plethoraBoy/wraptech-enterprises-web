@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./css/Contact.css";
+import "./Contact.css";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"; // Importing React Icons
 
 const ContactPage = () => {
