@@ -1,0 +1,144 @@
+/* Hero Section Container */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(to bottom right, #10b981, #059669);
+  color: white;
+  padding: 4rem 2rem;
+}
+
+/* 3 Decorative Squares */
+.hero-square {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.07);
+  z-index: 1;
+  border-radius: 6px;
+}
+
+/* Square Sizes and Positions */
+.square-one {
+  width: 60px;
+  height: 60px;
+  top: 50px;
+  left: 100px;
+}
+
+.square-two {
+  width: 100px;
+  height: 100px;
+  bottom: 80px;
+  right: 120px;
+}
+
+.square-three {
+  width: 40px;
+  height: 40px;
+  top: 200px;
+  right: 250px;
+}
+.square-four {
+  width: 100px;
+  height: 100px;
+  top: 400px;
+  left: 0px;
+}
+
+/* Main Content Container */
+.hero-background-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Text Content */
+.hero-content {
+  flex: 1 1 500px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-content .button {
+  background-color: #00d95f;
+  color: white;
+ border: 2px solid #00d95f;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+
+}
+
+.hero-content .button:hover {
+  background-color: transparent;
+  border: 2px solid #00d95f;
+}
+
+/* Image */
+.hero-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .hero-background-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content .button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
