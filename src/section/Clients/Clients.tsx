@@ -23,7 +23,7 @@ const ClientsSection = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
-    visible: (i:any) => ({
+    visible: (i:number) => ({
       opacity: 1,
       scale: 1,
       transition: {
@@ -35,7 +35,7 @@ const ClientsSection = () => {
   };
 
   return (
-    <motion.section
+    <motion.section id="clients"
       className="clients-section"
       initial="hidden"
       whileInView="visible"

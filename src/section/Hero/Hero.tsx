@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="hero-section">
+    <section id='hero' className="hero-section">
       {/* Decorative Squares */}
       <div className="hero-square square-one" />
       <div className="hero-square square-two" />

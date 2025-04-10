@@ -1,8 +1,8 @@
 .footer {
   background-color: #111;
   color: #ccc;
-  padding: 60px 20px 30px;
   font-family: 'Segoe UI', sans-serif;
+  padding: 20px 12px;
 }
 
 .footer-container {
@@ -11,36 +11,39 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .footer-brand,
 .footer-links,
 .footer-socials {
-  flex: 1 1 300px;
+  flex: 1 1 250px;
 }
 
 .footer-brand h2 {
   color: #fff;
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin: 0 0 4px;
 }
 
 .footer-brand p {
-  font-size: 14px;
+  font-size: 12px;
   color: #888;
+  margin: 0;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 4px;
+  margin: 0;
 }
 
 .footer-links a {
   color: #ccc;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   transition: color 0.2s ease;
 }
 
@@ -51,59 +54,68 @@
 .footer-socials {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
+  margin-top: 0;
 }
 
 .footer-socials a img {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   filter: brightness(0.8);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .footer-socials a:hover img {
   filter: brightness(1);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
-  font-size: 13px;
+  margin-top: 10px;
+  font-size: 11px;
   color: #777;
 }
 
-/* Responsive Layouts */
-@media (max-width: 992px) {
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-  }
-
-  .footer-links {
-    align-items: center;
-  }
-
-  .footer-socials {
-    justify-content: center;
-  }
-}
-
+/* 🔥 Mobile First: Super tight layout */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 12px;
+  }
+
+  .footer-brand,
+  .footer-links,
+  .footer-socials {
+    flex: none;
+    width: 100%;
   }
 
   .footer-links {
-    flex-direction: column;
-    gap: 10px;
-    margin: 20px 0;
+    gap: 2px;
   }
 
   .footer-socials {
-    margin-top: 20px;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .footer-brand h2 {
+    font-size: 16px;
+  }
+
+  .footer-brand p {
+    font-size: 11px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    margin-top: 8px;
+    font-size: 10px;
   }
 }

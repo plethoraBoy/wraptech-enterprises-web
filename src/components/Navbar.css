@@ -19,15 +19,18 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.logo-title{
+
+.logo-title {
   height: 40px;
   object-fit: fill;
 }
+
 /* Logo */
 .logo-img {
   height: 50px;
@@ -46,7 +49,7 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1002;
 }
 
 .hamburger-lines .line {
@@ -55,6 +58,7 @@
   background-color: #0e2431;
   border-radius: 10px;
   transition: all 0.4s ease;
+  transform-origin: center;
 }
 
 /* Nav items */
@@ -70,6 +74,7 @@
   font-size: 1.1rem;
   padding: 0.7rem;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .menu-items li a:hover {
@@ -93,7 +98,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 6rem;
-    transition: left 0.4s ease;
+    transition: left 0.4s ease-in-out;
     z-index: 999;
   }
 
@@ -110,10 +115,17 @@
   .checkbox:checked ~ .hamburger-lines .line1 {
     transform: rotate(45deg) translate(5px, 5px);
   }
+
   .checkbox:checked ~ .hamburger-lines .line2 {
     opacity: 0;
   }
+
   .checkbox:checked ~ .hamburger-lines .line3 {
     transform: rotate(-45deg) translate(7px, -6px);
   }
+}
+
+/* Prevent background scroll when menu is open */
+body.no-scroll {
+  overflow: hidden;
 }

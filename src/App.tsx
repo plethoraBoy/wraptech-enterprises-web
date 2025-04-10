@@ -8,6 +8,7 @@ import Clients from "./section/Clients/Clients";
 import Footer from "./section/Footer/Footer";
 import ServicesPage from "./page/ServicesPage";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import ContactPage from "./page/ContactPage";
 
 function HomePage() {
   return (
@@ -26,7 +27,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {/* <Route path="#aBOUT" element={<AboutUs/>} /> */}
+
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/contact" element={<ContactPage/>} />
       </Routes>
       <Footer />
 

@@ -1,9 +1,24 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import './Navbar.css'
+import { useEffect } from "react";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
+  useEffect(() => {
+    if (location.hash) {
+      const elementId = location.hash.replace("#", "");
+      const target = document.getElementById(elementId);
+      if (target) {
+        // Scroll after a short delay to make sure the DOM is ready
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -36,21 +51,24 @@ const Navbar = () => {
         <ul className={`menu-items ${isOpen ? "open" : ""}`}>
           <li>
             {" "}
-            <Link to="/" >
+            {/* <Link to="/" >
               Home
-            </Link>
+            </Link> */}
+            <a href="/">Home</a>
+
           </li>
           <li>
-            <a href="#" >About</a>
+          <Link to="/#about">About</Link>
+
           </li>
           <li>
           <Link to="/services" >Services</Link>
           </li>
           <li>
-            <a href="#">Clients</a>
+            <Link to="/#clients">Clients</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+          <Link to="/contact" >Contact</Link>
           </li>
         </ul>
       </div>
