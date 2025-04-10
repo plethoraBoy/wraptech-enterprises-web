@@ -1,24 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './Navbar.css'
-import { useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  // Scroll handling based on location hash
   useEffect(() => {
     if (location.hash) {
       const elementId = location.hash.replace("#", "");
       const target = document.getElementById(elementId);
       if (target) {
-        // Scroll after a short delay to make sure the DOM is ready
+        // Scroll to the target element smoothly
         setTimeout(() => {
           target.scrollIntoView({ behavior: "smooth" });
         }, 100);
       }
+    } else {
+      // Ensure the page scrolls to the top when there's no hash
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
+
+  const handleLinkClick = () => {
+    setIsOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -50,25 +58,19 @@ const Navbar = () => {
         {/* Nav Items */}
         <ul className={`menu-items ${isOpen ? "open" : ""}`}>
           <li>
-            {" "}
-            {/* <Link to="/" >
-              Home
-            </Link> */}
-            <a href="/">Home</a>
-
+            <a href="/" onClick={handleLinkClick}>Home</a>
           </li>
           <li>
-          <Link to="/#about">About</Link>
-
+            <Link to="/#about" onClick={handleLinkClick}>About</Link>
           </li>
           <li>
-          <Link to="/services" >Services</Link>
+            <Link to="/services" onClick={handleLinkClick}>Services</Link>
           </li>
           <li>
-            <Link to="/#clients">Clients</Link>
+            <Link to="/#clients" onClick={handleLinkClick}>Clients</Link>
           </li>
           <li>
-          <Link to="/contact" >Contact</Link>
+            <Link to="/contact" onClick={handleLinkClick}>Contact</Link>
           </li>
         </ul>
       </div>

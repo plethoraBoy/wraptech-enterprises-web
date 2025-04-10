@@ -207,5 +207,9 @@ color: #00d95f;
     .contact-form h3 {
       font-size: 20px;
     }
+    .button {
+      width: 100%;
+      text-align: center;
+    }
   }
   
