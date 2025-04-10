@@ -23,7 +23,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         {/* Logo */}
-        <div className="logo">
+        <div className="company-logo">
           <img
             src="/assets/navbar/logotitle.png"
             alt="Logo-Title"

@@ -20,22 +20,26 @@
   justify-content: space-between;
 }
 
-.logo {
+.company-logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.5rem; /* Controls space between title and logo */
+  padding: 0; /* Removes any unexpected padding */
+  margin: 0;  /* Removes any unexpected margin */
 }
 
 .logo-title {
-  height: 40px;
-  object-fit: fill;
+  height: 36px; /* Slightly smaller to match logo proportion */
+  object-fit: contain;
+  display: block;
 }
 
-/* Logo */
 .logo-img {
-  height: 50px;
-  object-fit: fill;
+  height: 44px; /* Slightly smaller and balanced */
+  object-fit: contain;
+  display: block;
 }
+
 
 /* Hamburger styles */
 .checkbox {
