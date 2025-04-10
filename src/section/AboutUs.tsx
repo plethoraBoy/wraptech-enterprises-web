@@ -14,7 +14,7 @@ const AboutUs = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <img
-            src="/assets/navbar/product-development-concept-illustration.png"
+            src="/assets/images/aboutus.svg"
             alt="Team or concept"
           />
         </motion.div>
@@ -31,6 +31,14 @@ const AboutUs = () => {
           <p>
             We are passionate developers building cool stuff with React and Vite. Our mission is to deliver fast, modern web applications.
           </p>
+
+          <div className="company-started">
+            <h3>How We Started</h3>
+            <p>
+              WRAPTECH Enterprises was founded in <strong>2018</strong> with a vision to empower businesses with smart digital and security solutions. 
+              What began as a small initiative among tech enthusiasts is now a growing brand committed to innovation and customer satisfaction.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

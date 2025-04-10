@@ -1,66 +1,122 @@
 .about-section {
-    padding: 4rem 2rem;
-    background-color: #f8f8f8;
-  }
-  
+  padding: 60px 16px;
+  background: linear-gradient(to right, #f0fff4, #e6fffa);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-card img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.about-content {
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #064e3b;
+  position: relative;
+}
+
+.about-content h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #10b981;
+  margin-top: 10px;
+  border-radius: 999px;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 20px;
+  color: #1f2937;
+}
+
+/* Company box */
+.company-started {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-left: 6px solid #10b981;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.company-started h3 {
+  font-size: 1.3rem;
+  color: #047857;
+  margin-bottom: 10px;
+}
+
+.company-started p {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Tablet and larger */
+@media (min-width: 768px) {
   .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    gap: 60px;
   }
-  
-  /* Left: Card/Image */
-  .about-card {
-    flex: 1 1 400px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .about-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  /* Right: Content */
+
+  .about-card,
   .about-content {
-    flex: 1 1 500px;
+    width: 50%;
   }
-  
+
+  .about-content {
+    padding-left: 20px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
   .about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #196503;
+    font-size: 1.8rem;
   }
-  
-  .about-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;
+
+  .about-content p,
+  .company-started p {
+    font-size: 0.95rem;
   }
-  
-  /* Responsive for smaller screens */
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-content h2 {
-      font-size: 2rem;
-    }
-  
-    .about-content p {
-      font-size: 1.1rem;
-    }
+
+  .about-container {
+    gap: 30px;
   }
-  
+
+  .company-started {
+    padding: 16px;
+  }
+}

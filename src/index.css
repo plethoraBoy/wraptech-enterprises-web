@@ -7,6 +7,9 @@
 }
 
 body, html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 
