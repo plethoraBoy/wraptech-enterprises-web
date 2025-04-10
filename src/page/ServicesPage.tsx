@@ -90,7 +90,7 @@ const ServicesPage = () => {
       {servicesData.map((section, index) => (
         <motion.div
           key={index}
-          className="services-section"
+          className="services-page-section"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}

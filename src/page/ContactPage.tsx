@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import "./css/Contact.css";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"; // Importing React Icons
 
 const ContactPage = () => {
   return (
@@ -29,11 +30,11 @@ const ContactPage = () => {
           <p className="position">Managing Director</p>
 
           <div className="info-group">
-            <i className="icon phone"></i>
+            <FaPhone className="icon" size={12} />
             <span>+91 91769 19024</span>
           </div>
           <div className="info-group">
-            <i className="icon email"></i>
+            <FaEnvelope className="icon" />
             <span>
               wraptech1@outlook.com
               <br />
@@ -41,7 +42,7 @@ const ContactPage = () => {
             </span>
           </div>
           <div className="info-group">
-            <i className="icon location"></i>
+            <FaMapMarkerAlt className="icon" />
             <span>
               No.15, Annai Mary 1st Street,
               <br />
@@ -65,9 +66,14 @@ const ContactPage = () => {
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />
           <textarea placeholder="Your Message" required></textarea>
-          <motion.button  whileHover={{ scale: 1.05 }}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-           className="button" type="submit">Send Message</motion.button>
+            className="button"
+            type="submit"
+          >
+            Send Message
+          </motion.button>
         </form>
 
         <div className="map-container">
