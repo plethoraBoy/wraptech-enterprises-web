@@ -9,7 +9,8 @@
     font-size: 32px;
     text-align: center;
     font-weight: bold;
-    background: linear-gradient(90deg, #00c853, #64dd17);
+    color: #064e3b;
+    background: linear-gradient(to right, #064e3b, #064e3b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 40px;

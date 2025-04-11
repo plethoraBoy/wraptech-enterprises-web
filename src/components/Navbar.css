@@ -20,26 +20,48 @@
   justify-content: space-between;
 }
 
+.button {
+  background: #00d95f;
+  border: 2px solid #00d95f;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+
+
+.button:hover {
+  background-color: transparent;
+  color: #00d95f;
+}
+
+
+
+/* Logo */
 .company-logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Controls space between title and logo */
-  padding: 0; /* Removes any unexpected padding */
-  margin: 0;  /* Removes any unexpected margin */
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 .logo-title {
-  height: 36px; /* Slightly smaller to match logo proportion */
+  height: 36px;
   object-fit: contain;
   display: block;
 }
 
 .logo-img {
-  height: 44px; /* Slightly smaller and balanced */
+  height: 44px;
   object-fit: contain;
   display: block;
 }
-
 
 /* Hamburger styles */
 .checkbox {
@@ -115,20 +137,44 @@
     font-size: 1.5rem;
   }
 
-  /* Animate hamburger */
   .checkbox:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg) translate(7px, 8px); /* First line rotates to form part of X */
+    transform: rotate(45deg) translate(7px, 8px);
+  }
+
+  .checkbox:checked ~ .hamburger-lines .line2 {
+    opacity: 0;
+  }
+
+  .checkbox:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg) translate(7px, -9px);
+  }
+
+  /* Mobile contact button styling */
+  .mobile-only {
+    display: block!important;
+  }
+
+  .desktop-only {
+    display: none!important;
+  }
+
+  .mobile-only .button {
+    font-size: 1.5rem;
+    padding: 0.8rem 8rem;
+    border-radius: 999px;
+    min-width: 100%!important;
+    max-width: 100%!important;
+  }
+
 }
 
-.checkbox:checked ~ .hamburger-lines .line2 {
-    opacity: 0; /* Second line disappears */
+/* Desktop Only & Mobile Only visibility classes */
+.desktop-only {
+  display: block;
 }
 
-.checkbox:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg) translate(7px, -9px); /* Third line rotates to form part of X */
-}
-
-
+.mobile-only {
+  display: none;
 }
 
 /* Prevent background scroll when menu is open */

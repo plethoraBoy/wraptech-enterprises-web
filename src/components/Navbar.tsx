@@ -1,30 +1,28 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import './Navbar.css'
+import "./Navbar.css";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  // Scroll handling based on location hash
   useEffect(() => {
     if (location.hash) {
       const elementId = location.hash.replace("#", "");
       const target = document.getElementById(elementId);
       if (target) {
-        // Scroll to the target element smoothly
         setTimeout(() => {
           target.scrollIntoView({ behavior: "smooth" });
         }, 100);
       }
     } else {
-      // Ensure the page scrolls to the top when there's no hash
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
   const handleLinkClick = () => {
-    setIsOpen(false); // Close the menu when a link is clicked
+    setIsOpen(false);
   };
 
   return (
@@ -37,7 +35,6 @@ const Navbar = () => {
             alt="Logo-Title"
             className="logo-title"
           />
-
           <img src="/assets/navbar/logo.png" alt="Logo" className="logo-img" />
         </div>
 
@@ -58,21 +55,45 @@ const Navbar = () => {
         {/* Nav Items */}
         <ul className={`menu-items ${isOpen ? "open" : ""}`}>
           <li>
-            <a href="/" onClick={handleLinkClick}>Home</a>
+            <a href="/" onClick={handleLinkClick}>
+              Home
+            </a>
           </li>
           <li>
-            <Link to="/#about" onClick={handleLinkClick}>About</Link>
+            <a href="#about" onClick={handleLinkClick}>
+              About
+            </a>
           </li>
           <li>
-            <Link to="/services" onClick={handleLinkClick}>Services</Link>
+            <Link to="/services" onClick={handleLinkClick}>
+              Services
+            </Link>
           </li>
           <li>
-            <Link to="/#clients" onClick={handleLinkClick}>Clients</Link>
+            <a href="#clients" onClick={handleLinkClick}>
+              Clients
+            </a>
           </li>
-          <li>
-            <Link to="/contact" onClick={handleLinkClick}>Contact</Link>
+          {/* Contact Button in Mobile */}
+          <li className="mobile-only">
+            <Link to="/contact" onClick={handleLinkClick} className="button">
+              Contact
+            </Link>
           </li>
         </ul>
+
+        {/* Contact Button for Desktop */}
+        <div className="desktop-only">
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              to="/contact"
+              onClick={handleLinkClick}
+              className="button"
+            >
+              Contact
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </nav>
   );

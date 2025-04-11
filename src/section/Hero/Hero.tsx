@@ -20,13 +20,13 @@ const Hero = () => {
         >
           <h1>Explore the Technology</h1>
           <p>Uncover the power of cutting-edge technology designed to elevate innovation and drive smarter outcomes.</p>
-          <motion.button
+          {/* <motion.button
             className="button"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Get Started
-          </motion.button>
+          </motion.button> */}
         </motion.div>
 
         <motion.div
