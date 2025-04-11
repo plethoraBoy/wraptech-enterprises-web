@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion, AnimatePresence } from 'framer-motion';
-import './FAQ.css';
 import { useState } from 'react';
+import './FAQ.css';
 
 const faqs = [
   {
@@ -56,3 +56,5 @@ export default function FAQ() {
     </div>
   );
 }
+
+
