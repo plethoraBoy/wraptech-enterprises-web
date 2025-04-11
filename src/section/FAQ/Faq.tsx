@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import './FAQ.css';
+import './Faq.css';
 
 const faqs = [
   {
