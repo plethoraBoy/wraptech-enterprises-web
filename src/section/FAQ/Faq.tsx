@@ -23,7 +23,7 @@ const faqs = [
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggle = (index) => {
+  const toggle = (index:any) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
