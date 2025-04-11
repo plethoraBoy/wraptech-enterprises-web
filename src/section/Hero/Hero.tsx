@@ -9,6 +9,9 @@ const Hero = () => {
       <div className="hero-square square-two" />
       <div className="hero-square square-three" />
       <div className="hero-square square-four" />
+      <div className="hero-polygon hexagon" />
+<div className="hero-polygon pentagon" />
+
 
       {/* Hero Content */}
       <div className="hero-background-wrapper">

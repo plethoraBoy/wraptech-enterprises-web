@@ -90,7 +90,7 @@ const Navbar = () => {
               onClick={handleLinkClick}
               className="button"
             >
-              Contact
+              Contact us
             </Link>
           </motion.div>
         </div>

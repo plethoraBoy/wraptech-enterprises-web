@@ -110,6 +110,30 @@
   border-radius: 12px;
   object-fit: cover;
 }
+/* Common polygon style */
+.hero-polygon {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.07);
+  z-index: 1;
+  pointer-events: none;
+  width: 80px;
+  height: 80px;
+}
+
+/* Hexagon */
+.hexagon {
+  border-radius: 8px;
+
+  top: 100px;
+  right: 50px;
+}
+
+/* Pentagon */
+.pentagon {
+ border-radius: 8px;
+  bottom: 150px;
+  left: 80px;
+}
 
 /* Responsive for tablets */
 @media (max-width: 768px) {
