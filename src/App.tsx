@@ -11,6 +11,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import ContactPage from "./page/ContactPage/ContactPage";
 import { useEffect, useRef, useState } from "react";
 import { FiChevronUp } from "react-icons/fi";
+import FAQ from './section/FAQ/Faq';
 
 function HomePage() {
   const scrollBtnRef = useRef<HTMLButtonElement>(null);
@@ -35,7 +36,7 @@ function HomePage() {
       <AboutUs />
       <Services />
       {/* <Clients /> */}
-
+<FAQ />
       <button
         ref={scrollBtnRef}
         onClick={scrollToTop}
