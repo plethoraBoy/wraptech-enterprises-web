@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion, AnimatePresence } from 'framer-motion';
 import './FAQ.css';
+import { useState } from 'react';
 
 const faqs = [
   {
