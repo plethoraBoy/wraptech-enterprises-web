@@ -29,8 +29,8 @@ const AboutUs = () => {
         >
           <h2>About Us</h2>
           <p>
-            We are passionate developers building cool stuff with React and Vite. Our mission is to deliver fast, modern web applications.
-          </p>
+    WRAPTECH Enterprises is a leading provider of digital, security, and surveillance solutions, delivering high-quality and reliable technology tailored to modern business needs. Our commitment lies in empowering clients with seamless and scalable solutions.
+  </p>
 
           <div className="company-started">
             <h3>How We Started</h3>

@@ -69,11 +69,11 @@ const Navbar = () => {
               Services
             </Link>
           </li>
-          <li>
+          {/* <li>
             <a href="#clients" onClick={handleLinkClick}>
               Clients
             </a>
-          </li>
+          </li> */}
           {/* Contact Button in Mobile */}
           <li className="mobile-only">
             <Link to="/contact" onClick={handleLinkClick} className="button">

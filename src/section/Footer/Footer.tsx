@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; // Use this for route navigation
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const FooterSection = () => {
@@ -25,43 +25,41 @@ const FooterSection = () => {
         <motion.div className="footer-links">
           <motion.a
             href="/"
-            whileHover={{ scale: 1.1, color: "#fff" }}
+            whileHover={{ scale: 1.1, color: "#000" }}
             transition={{ type: "spring", stiffness: 50 }}
           >
             Home
           </motion.a>
-          <Link
-            to="/services"
-            className="footer-link"
-          >
-            Services
-          </Link>
-          <motion.a
+          <Link to="/services" className="footer-link">Services</Link>
+          {/* <motion.a
             href="/#clients"
-            whileHover={{ scale: 1.1, color: "#fff" }}
+            whileHover={{ scale: 1.1, color: "#000" }}
             transition={{ type: "spring", stiffness: 50 }}
           >
             Clients
-          </motion.a>
+          </motion.a> */}
           <motion.a
             href="/contact"
-            whileHover={{ scale: 1.1, color: "#fff" }}
+            whileHover={{ scale: 1.1, color: "#000" }}
             transition={{ type: "spring", stiffness: 50 }}
           >
             Contact
           </motion.a>
         </motion.div>
 
-        {/* Socials */}
+        {/* Social Icons */}
         <motion.div className="footer-socials">
           {["facebook", "instagram", "linkedin"].map((platform, i) => (
             <motion.a
               key={i}
               href="#"
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1 }}
               transition={{ duration: 0.3 }}
             >
-              <img src={`assets/images/footer/${platform}.png`} alt={platform} />
+              <img
+                src={`assets/images/footer/${platform}.png`}
+                alt={platform}
+              />
             </motion.a>
           ))}
         </motion.div>
