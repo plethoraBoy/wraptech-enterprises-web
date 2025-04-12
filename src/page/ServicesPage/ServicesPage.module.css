@@ -118,6 +118,7 @@
   display: grid;
   gap: 1rem;
   padding:  0rem 3rem;
+  margin-top: 1rem;
 }
 
 .serviceCard {
@@ -237,7 +238,12 @@
     top: 10px;
     left: 10px;
   }
-
+.serviceCard{
+  padding: 1rem;
+}
+.serviceGrid{
+  padding: 0rem;
+}
   .sectionBadge h3 {
     font-size: 1.2rem;
   }
