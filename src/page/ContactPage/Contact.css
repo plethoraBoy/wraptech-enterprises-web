@@ -1,7 +1,7 @@
 :root {
   --primary-green: #10b981;
   --primary-dark: #059669;
-  --accent-green: #00b34f;
+  --accent-green: #00d95f;
   --accent-green-dark: #009e42;
   --light-bg: #f5f5f5;
   --white: #ffffff;
@@ -139,9 +139,9 @@
 }
 
 .contact-form button {
-  background-color: var(--accent-green);
+  background-color: #00d95f;
   color: var(--white);
-  border: 2px solid var(--accent-green);
+  border: 2px solid #00d95f;
   padding: 0.8rem 2rem;
   font-size: 1.2rem;
   border-radius: 999px;
@@ -176,6 +176,42 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+.notification {
+  padding: 16px 24px;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.3s ease-in-out;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.notification.success {
+  background-color: #e6f9ef;
+  color: #137b5c;
+  border-left: 4px solid #10b981;
+}
+
+.notification.error {
+  background-color: #fef1f1;
+  color: #b91c1c;
+  border-left: 4px solid #ef4444;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Enhancements */

@@ -8,6 +8,7 @@ import { FaHome } from "react-icons/fa";
 import { GiWrench, GiHotMeal, GiCardExchange } from "react-icons/gi";
 import { IoMdHome } from "react-icons/io";
 import { RiWifiLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const services = [
@@ -55,7 +56,8 @@ const ServicesSection = () => {
             security, automation, and connectivity in modern living and working
             environments.
           </p>
-          <button className={styles.servicesButton}>Explore Services</button>
+          <Link to="/services" >          <button className={styles.servicesButton}>Explore Services</button>
+          </Link>
         </motion.div>
 
         {/* Services Grid */}
